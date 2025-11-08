@@ -34,13 +34,21 @@
             overflow-x: hidden;
         }
 
+        /* Mobile-optimized typography */
         .hero-title {
-            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-size: clamp(2rem, 8vw, 5rem);
             font-weight: 800;
             letter-spacing: -0.03em;
-            line-height: 1.1;
+            line-height: 1.15;
             will-change: transform;
             transform: translateZ(0);
+        }
+
+        /* Mobile: reduce padding */
+        @media (max-width: 768px) {
+            .hero-title {
+                line-height: 1.2;
+            }
         }
 
         .section-title {
@@ -255,73 +263,73 @@
         <!-- Mesh gradient background -->
         <div class="mesh-gradient"></div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+            <div class="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-8 sm:gap-16 items-center">
 
                 <!-- Left: Clear messaging -->
-                <div class="fade-in">
+                <div class="fade-in text-center lg:text-left">
                     <!-- Trust indicator -->
-                    <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 no-layout-shift">
+                    <div class="inline-flex items-center gap-2 glass px-3 sm:px-4 py-2 rounded-full mb-6 sm:mb-8 no-layout-shift text-xs sm:text-sm">
                         <span class="w-2 h-2 bg-green-400 rounded-full pulse"></span>
-                        <span class="text-gray-300 text-sm font-medium">Trusted by 150+ businesses since 2019</span>
+                        <span class="text-gray-300 font-medium">Trusted by 150+ businesses since 2019</span>
                     </div>
 
                     <!-- Clear headline -->
-                    <h1 class="hero-title text-white mb-6">
+                    <h1 class="hero-title text-white mb-4 sm:mb-6">
                         We cut your uniform rental costs by
                         <span class="gradient-text">50% or more</span>
                     </h1>
 
                     <!-- Simple explanation -->
-                    <p class="text-xl text-gray-400 mb-8 leading-relaxed max-w-xl">
+                    <p class="text-lg sm:text-lg sm:text-xl text-gray-400 mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
                         Expert contract negotiation for Cintas, Aramark, UniFirst, and Vestis contracts.
                         We find overcharges, eliminate fees, and secure better terms.
                     </p>
 
                     <!-- Clear CTAs -->
-                    <div class="flex flex-wrap gap-4 mb-12">
-                        <button class="btn-primary text-white">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-12 justify-center lg:justify-start">
+                        <button class="btn-primary text-white text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
                             Get Your Free Savings Report
                         </button>
-                        <button class="px-8 py-4 glass text-white font-medium rounded-xl hover-lift">
+                        <button class="px-6 sm:px-8 py-3 sm:py-4 glass text-white font-medium rounded-xl hover-lift text-sm sm:text-base">
                             Call 951-963-9575
                         </button>
                     </div>
 
                     <!-- Simple metrics -->
-                    <div class="grid grid-cols-3 gap-8 no-layout-shift">
+                    <div class="grid grid-cols-3 gap-4 sm:gap-4 sm:gap-8 no-layout-shift">
                         <div>
-                            <div class="text-3xl font-bold gradient-text mb-1">$12.4M</div>
-                            <div class="text-sm text-gray-500">Total Client Savings</div>
+                            <div class="text-xl sm:text-2xl sm:text-2xl sm:text-3xl font-bold gradient-text mb-1">$12.4M</div>
+                            <div class="text-xs sm:text-sm text-gray-500">Total Client Savings</div>
                         </div>
                         <div>
-                            <div class="text-3xl font-bold text-white mb-1">52%</div>
-                            <div class="text-sm text-gray-500">Average Reduction</div>
+                            <div class="text-xl sm:text-2xl sm:text-2xl sm:text-3xl font-bold text-white mb-1">52%</div>
+                            <div class="text-xs sm:text-sm text-gray-500">Average Reduction</div>
                         </div>
                         <div>
-                            <div class="text-3xl font-bold text-white mb-1">6 weeks</div>
-                            <div class="text-sm text-gray-500">Typical Timeline</div>
+                            <div class="text-xl sm:text-2xl sm:text-2xl sm:text-3xl font-bold text-white mb-1">6 weeks</div>
+                            <div class="text-xs sm:text-sm text-gray-500">Typical Timeline</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right: Simplified visual -->
-                <div class="relative fade-in" style="animation-delay: 0.15s;">
+                <div class="relative fade-in mt-8 lg:mt-0" style="animation-delay: 0.15s;">
                     <!-- Main display card -->
-                    <div class="glass-dark rounded-2xl p-8 shadow-glow no-layout-shift">
+                    <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-glow no-layout-shift">
 
-                        <div class="text-center mb-8">
-                            <h3 class="text-white text-lg font-semibold mb-2">Your Potential Savings</h3>
-                            <p class="text-gray-400 text-sm">Based on 150+ similar contracts analyzed</p>
+                        <div class="text-center mb-6 sm:mb-8">
+                            <h3 class="text-white text-base sm:text-lg font-semibold mb-2">Your Potential Savings</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm">Based on 150+ similar contracts analyzed</p>
                         </div>
 
                         <!-- Simple before/after -->
-                        <div class="space-y-6">
+                        <div class="space-y-4 sm:space-y-6">
                             <!-- Current costs -->
                             <div>
                                 <div class="flex justify-between items-center mb-2">
-                                    <span class="text-gray-400 text-sm">Current Monthly Cost</span>
-                                    <span class="text-white font-semibold">$28,900</span>
+                                    <span class="text-gray-400 text-xs sm:text-sm">Current Monthly Cost</span>
+                                    <span class="text-white font-semibold text-sm sm:text-base">$28,900</span>
                                 </div>
                                 <div class="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
                                     <div class="h-full bg-red-500/50 progress-bar"></div>
@@ -331,8 +339,8 @@
                             <!-- After negotiation -->
                             <div>
                                 <div class="flex justify-between items-center mb-2">
-                                    <span class="text-gray-400 text-sm">After Our Negotiation</span>
-                                    <span class="text-green-400 font-semibold">$13,800</span>
+                                    <span class="text-gray-400 text-xs sm:text-sm">After Our Negotiation</span>
+                                    <span class="text-green-400 font-semibold text-sm sm:text-base">$13,800</span>
                                 </div>
                                 <div class="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
                                     <div class="h-full bg-green-500/50 progress-bar" style="transform: scaleX(0.48); animation-delay: 0.3s;"></div>
@@ -340,44 +348,44 @@
                             </div>
 
                             <!-- Key improvements -->
-                            <div class="border-t border-gray-700 pt-6">
-                                <h4 class="text-white font-medium mb-4">What We Typically Fix:</h4>
-                                <div class="space-y-3">
-                                    <div class="flex items-center gap-3">
+                            <div class="border-t border-gray-700 pt-4 sm:pt-6">
+                                <h4 class="text-white font-medium mb-3 sm:mb-4 text-sm sm:text-base">What We Typically Fix:</h4>
+                                <div class="space-y-2 sm:space-y-3">
+                                    <div class="flex items-center gap-2 sm:gap-3">
                                         <div class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
                                             <svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-300 text-sm">Remove 5-year auto-renewal traps</span>
+                                        <span class="text-gray-300 text-xs sm:text-sm">Remove 5-year auto-renewal traps</span>
                                     </div>
-                                    <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-2 sm:gap-3">
                                         <div class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
                                             <svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-300 text-sm">Eliminate hidden service fees</span>
+                                        <span class="text-gray-300 text-xs sm:text-sm">Eliminate hidden service fees</span>
                                     </div>
-                                    <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-2 sm:gap-3">
                                         <div class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
                                             <svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                             </svg>
                                         </div>
-                                        <span class="text-gray-300 text-sm">Cap annual increases at 3%</span>
+                                        <span class="text-gray-300 text-xs sm:text-sm">Cap annual increases at 3%</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Bottom CTA -->
-                            <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-6 border border-green-500/20">
+                            <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-4 sm:p-6 border border-green-500/20">
                                 <div class="text-center">
-                                    <div class="text-3xl font-bold gradient-text mb-2">
+                                    <div class="text-xl sm:text-2xl sm:text-2xl sm:text-3xl font-bold gradient-text mb-2">
                                         Save $181,200
                                     </div>
-                                    <div class="text-gray-400 text-sm mb-4">per year on average</div>
-                                    <button class="w-full btn-primary text-white">
+                                    <div class="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">per year on average</div>
+                                    <button class="w-full btn-primary text-white text-sm sm:text-base px-4 sm:px-6 py-3">
                                         See Your Exact Savings
                                     </button>
                                 </div>
@@ -386,7 +394,7 @@
                     </div>
 
                     <!-- Simple floating badge -->
-                    <div class="absolute -top-4 -right-4 glass px-4 py-2 rounded-lg">
+                    <div class="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 glass px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg">
                         <span class="text-white text-xs font-medium">No upfront fees</span>
                     </div>
                 </div>
@@ -395,48 +403,48 @@
     </section>
 
     <!-- Simple social proof bar -->
-    <section class="border-t border-gray-800 py-12">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-                <p class="text-gray-500 text-sm">Trusted by businesses across:</p>
-                <div class="flex gap-8 items-center">
-                    <span class="text-gray-400 font-medium">Manufacturing</span>
-                    <span class="text-gray-400 font-medium">Healthcare</span>
-                    <span class="text-gray-400 font-medium">Hospitality</span>
-                    <span class="text-gray-400 font-medium">Retail</span>
+    <section class="border-t border-gray-800 py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
+                <p class="text-gray-500 text-xs sm:text-sm">Trusted by businesses across:</p>
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-4 sm:gap-8 items-center">
+                    <span class="text-gray-400 font-medium text-sm sm:text-base">Manufacturing</span>
+                    <span class="text-gray-400 font-medium text-sm sm:text-base">Healthcare</span>
+                    <span class="text-gray-400 font-medium text-sm sm:text-base">Hospitality</span>
+                    <span class="text-gray-400 font-medium text-sm sm:text-base">Retail</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- The Problem Section -->
-    <section class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
+    <section class="py-16 sm:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-12 sm:mb-16">
                 <h2 class="section-title text-white mb-4">
                     You're being <span class="gradient-text">overcharged</span>
                 </h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                <p class="text-lg sm:text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
                     Uniform rental companies know you're locked in. Here's what they're doing to your contract.
                 </p>
             </div>
 
             <!-- Two column layout for better readability -->
-            <div class="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-4 sm:gap-6 max-w-6xl mx-auto">
                 <!-- Pain point 1 -->
-                <div class="glass-dark rounded-xl p-8 pain-card hover-lift">
-                    <div class="flex items-start gap-4">
+                <div class="glass-dark rounded-xl p-6 sm:p-8 pain-card hover-lift">
+                    <div class="flex items-start gap-3 sm:gap-4">
                         <div class="icon-box icon-box-glow flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-white mb-3">Auto-Renewal Trap</h3>
-                            <p class="text-gray-400 mb-4">
+                            <h3 class="text-lg sm:text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Auto-Renewal Trap</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                                 You're auto-renewed for 5 more years unless you cancel 90+ days before expiration. Miss it? You're stuck.
                             </p>
-                            <div class="inline-flex items-center gap-2 text-sm text-gray-500">
+                            <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-500">
                                 <span class="text-green-400">→</span>
                                 <span>Found in 94% of contracts</span>
                             </div>
@@ -445,19 +453,19 @@
                 </div>
 
                 <!-- Pain point 2 -->
-                <div class="glass-dark rounded-xl p-8 pain-card hover-lift">
-                    <div class="flex items-start gap-4">
+                <div class="glass-dark rounded-xl p-6 sm:p-8 pain-card hover-lift">
+                    <div class="flex items-start gap-3 sm:gap-4">
                         <div class="icon-box icon-box-glow flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-white mb-3">Hidden Fee Escalation</h3>
-                            <p class="text-gray-400 mb-4">
+                            <h3 class="text-lg sm:text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Hidden Fee Escalation</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                                 Fuel surcharges, delivery fees, processing charges. They stack up to 15-25% above your quoted rate.
                             </p>
-                            <div class="inline-flex items-center gap-2 text-sm text-gray-500">
+                            <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-500">
                                 <span class="text-green-400">→</span>
                                 <span>Average $4,200/year in hidden fees</span>
                             </div>
@@ -466,19 +474,19 @@
                 </div>
 
                 <!-- Pain point 3 -->
-                <div class="glass-dark rounded-xl p-8 pain-card hover-lift">
-                    <div class="flex items-start gap-4">
+                <div class="glass-dark rounded-xl p-6 sm:p-8 pain-card hover-lift">
+                    <div class="flex items-start gap-3 sm:gap-4">
                         <div class="icon-box icon-box-glow flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-white mb-3">Uncapped Increases</h3>
-                            <p class="text-gray-400 mb-4">
+                            <h3 class="text-lg sm:text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Uncapped Increases</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                                 "We reserve the right to adjust pricing." Translation: 8-12% annual increases with no ceiling.
                             </p>
-                            <div class="inline-flex items-center gap-2 text-sm text-gray-500">
+                            <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-500">
                                 <span class="text-green-400">→</span>
                                 <span>Your costs double every 6-8 years</span>
                             </div>
@@ -487,19 +495,19 @@
                 </div>
 
                 <!-- Pain point 4 -->
-                <div class="glass-dark rounded-xl p-8 pain-card hover-lift">
-                    <div class="flex items-start gap-4">
+                <div class="glass-dark rounded-xl p-6 sm:p-8 pain-card hover-lift">
+                    <div class="flex items-start gap-3 sm:gap-4">
                         <div class="icon-box icon-box-glow flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-white mb-3">Liquidated Damages</h3>
-                            <p class="text-gray-400 mb-4">
+                            <h3 class="text-lg sm:text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Liquidated Damages</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                                 Try to cancel early? They'll charge you for the entire remaining contract value. It's in the fine print.
                             </p>
-                            <div class="inline-flex items-center gap-2 text-sm text-gray-500">
+                            <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-500">
                                 <span class="text-green-400">→</span>
                                 <span>Average penalty: $45,000+</span>
                             </div>
@@ -508,19 +516,19 @@
                 </div>
 
                 <!-- Pain point 5 -->
-                <div class="glass-dark rounded-xl p-8 pain-card hover-lift">
-                    <div class="flex items-start gap-4">
+                <div class="glass-dark rounded-xl p-6 sm:p-8 pain-card hover-lift">
+                    <div class="flex items-start gap-3 sm:gap-4">
                         <div class="icon-box icon-box-glow flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-white mb-3">Invoice Confusion</h3>
-                            <p class="text-gray-400 mb-4">
+                            <h3 class="text-lg sm:text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Invoice Confusion</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                                 Deliberately complex invoices make it impossible to track what you're actually paying for.
                             </p>
-                            <div class="inline-flex items-center gap-2 text-sm text-gray-500">
+                            <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-500">
                                 <span class="text-green-400">→</span>
                                 <span>2-3 hours/month wasted on billing</span>
                             </div>
@@ -529,19 +537,19 @@
                 </div>
 
                 <!-- Pain point 6 -->
-                <div class="glass-dark rounded-xl p-8 pain-card hover-lift">
-                    <div class="flex items-start gap-4">
+                <div class="glass-dark rounded-xl p-6 sm:p-8 pain-card hover-lift">
+                    <div class="flex items-start gap-3 sm:gap-4">
                         <div class="icon-box icon-box-glow flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-white mb-3">Poor Service = Same Price</h3>
-                            <p class="text-gray-400 mb-4">
+                            <h3 class="text-lg sm:text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Poor Service = Same Price</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
                                 Late deliveries, missing items, quality issues. But you're still paying full price with no recourse.
                             </p>
-                            <div class="inline-flex items-center gap-2 text-sm text-gray-500">
+                            <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-500">
                                 <span class="text-green-400">→</span>
                                 <span>No service guarantees in 89% of contracts</span>
                             </div>
@@ -551,13 +559,13 @@
             </div>
 
             <!-- CTA after problem -->
-            <div class="mt-16 text-center">
-                <div class="glass-dark rounded-2xl p-8 max-w-3xl mx-auto">
-                    <h3 class="text-2xl font-bold text-white mb-4">Sound familiar?</h3>
-                    <p class="text-gray-400 mb-6">
+            <div class="mt-12 sm:mt-16 text-center">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto">
+                    <h3 class="text-lg sm:text-xl sm:text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Sound familiar?</h3>
+                    <p class="text-sm sm:text-base text-gray-400 mb-5 sm:mb-6">
                         We've analyzed over 500 uniform rental contracts. These tactics are everywhere. But they're all negotiable.
                     </p>
-                    <button class="btn-primary text-white">
+                    <button class="btn-primary text-white text-sm sm:text-base px-6 sm:px-8">
                         Get Your Free Contract Analysis
                     </button>
                 </div>
@@ -566,13 +574,13 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="py-24 relative border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
+    <section class="py-16 sm:py-24 relative border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
                 <h2 class="section-title text-white mb-4">
                     Here's how we <span class="gradient-text">fix this</span>
                 </h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
                     Simple process. Zero risk. Results in weeks, not months.
                 </p>
             </div>
@@ -580,9 +588,9 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Step 1 -->
                 <div class="relative">
-                    <div class="glass-dark rounded-2xl p-8 hover-lift">
+                    <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                         <div class="step-number text-white mb-6">1</div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Contract Deep Dive</h3>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Contract Deep Dive</h3>
                         <p class="text-gray-400 mb-6">
                             Send us your current contract. We analyze every clause, identify overcharges, and calculate your true costs vs. market rate.
                         </p>
@@ -607,9 +615,9 @@
 
                 <!-- Step 2 -->
                 <div class="relative">
-                    <div class="glass-dark rounded-2xl p-8 hover-lift">
+                    <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                         <div class="step-number text-white mb-6">2</div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Expert Negotiation</h3>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Expert Negotiation</h3>
                         <p class="text-gray-400 mb-6">
                             We negotiate directly with your provider. Remove bad terms, cap increases, add service guarantees. No meetings needed from you.
                         </p>
@@ -633,9 +641,9 @@
 
                 <!-- Step 3 -->
                 <div class="relative">
-                    <div class="glass-dark rounded-2xl p-8 hover-lift">
+                    <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                         <div class="step-number text-white mb-6">3</div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Lock In Savings</h3>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Lock In Savings</h3>
                         <p class="text-gray-400 mb-6">
                             Review the new terms. Sign the improved contract. Start saving immediately. We only get paid when you save.
                         </p>
@@ -670,13 +678,13 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-24 relative border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
+    <section class="py-16 sm:py-24 relative border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
                 <h2 class="section-title text-white mb-4">
                     Full-Service <span class="gradient-text">Contract Support</span>
                 </h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
                     Whether you're stuck in a bad contract or starting fresh, we've got you covered.
                 </p>
             </div>
@@ -684,7 +692,7 @@
             <!-- Clean 2-column grid -->
             <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
                 <!-- Service 1 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                     <div class="flex items-start gap-4 mb-6">
                         <div class="icon-box icon-box-glow flex-shrink-0">
                             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -693,7 +701,7 @@
                         </div>
                         <div class="flex-1">
                             <div class="flex items-center gap-3 mb-2">
-                                <h3 class="text-xl font-bold text-white">Contract Negotiation</h3>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">Contract Negotiation</h3>
                                 <span class="glass px-2 py-0.5 rounded-full text-xs font-medium text-green-400">Most Popular</span>
                             </div>
                         </div>
@@ -718,14 +726,14 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                     <div class="flex items-start gap-4 mb-6">
                         <div class="icon-box icon-box-glow flex-shrink-0">
                             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Contract Cancellation</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Contract Cancellation</h3>
                     </div>
                     <p class="text-gray-400 mb-6">
                         Get out of bad contracts early. We handle liquidated damages negotiations and provider transitions.
@@ -747,14 +755,14 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                     <div class="flex items-start gap-4 mb-6">
                         <div class="icon-box icon-box-glow flex-shrink-0">
                             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Billing Audit</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Billing Audit</h3>
                     </div>
                     <p class="text-gray-400 mb-6">
                         Line-by-line invoice analysis to find overcharges, duplicate charges, and billing errors you're missing.
@@ -776,14 +784,14 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                     <div class="flex items-start gap-4 mb-6">
                         <div class="icon-box icon-box-glow flex-shrink-0">
                             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Multi-Location Strategy</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Multi-Location Strategy</h3>
                     </div>
                     <p class="text-gray-400 mb-6">
                         Enterprise accounts with multiple locations? We optimize across all sites for maximum leverage.
@@ -805,14 +813,14 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                     <div class="flex items-start gap-4 mb-6">
                         <div class="icon-box icon-box-glow flex-shrink-0">
                             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Expert Witness</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Expert Witness</h3>
                     </div>
                     <p class="text-gray-400 mb-6">
                         Legal disputes over contract terms? We provide expert testimony and written reports for arbitration.
@@ -834,14 +842,14 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
                     <div class="flex items-start gap-4 mb-6">
                         <div class="icon-box icon-box-glow flex-shrink-0">
                             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Contract Management</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Contract Management</h3>
                     </div>
                     <p class="text-gray-400 mb-6">
                         Never miss another renewal deadline. We track dates, monitor pricing, and alert you to action items.
@@ -866,13 +874,13 @@
     </section>
 
     <!-- Case Studies Section -->
-    <section class="py-24 relative border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
+    <section class="py-16 sm:py-24 relative border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
                 <h2 class="section-title text-white mb-4">
                     Real results from <span class="gradient-text">real businesses</span>
                 </h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
                     These aren't projections. These are actual savings from recent clients.
                 </p>
             </div>
@@ -880,8 +888,8 @@
             <!-- Stacked layout for better storytelling -->
             <div class="space-y-6 max-w-5xl mx-auto">
                 <!-- Case Study 1 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
-                    <div class="grid md:grid-cols-[1fr,auto,1fr] gap-8 items-center">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
+                    <div class="grid md:grid-cols-[1fr,auto,1fr] gap-4 sm:gap-8 items-center">
                         <div>
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="glass px-3 py-1 rounded-full">
@@ -889,7 +897,7 @@
                                 </div>
                                 <span class="text-gray-500 text-sm">Manufacturing • Ohio</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Regional HVAC Contractor</h3>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Regional HVAC Contractor</h3>
                             <p class="text-gray-400 text-sm italic">
                                 "They removed the auto-renewal clause and capped our annual increases at 3%. We were paying for services we didn't even use."
                             </p>
@@ -899,7 +907,7 @@
                             <svg class="w-8 h-8 text-green-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                             </svg>
-                            <div class="text-3xl font-bold gradient-text">51%</div>
+                            <div class="text-2xl sm:text-3xl font-bold gradient-text">51%</div>
                             <div class="text-gray-500 text-sm">reduction</div>
                         </div>
 
@@ -907,14 +915,14 @@
                             <div class="space-y-3">
                                 <div>
                                     <div class="text-gray-500 text-sm">Before</div>
-                                    <div class="text-xl font-bold text-white">$34,200/yr</div>
+                                    <div class="text-lg sm:text-xl font-bold text-white">$34,200/yr</div>
                                 </div>
                                 <div>
                                     <div class="text-gray-500 text-sm">After</div>
-                                    <div class="text-xl font-bold text-green-400">$16,800/yr</div>
+                                    <div class="text-lg sm:text-xl font-bold text-green-400">$16,800/yr</div>
                                 </div>
                                 <div class="pt-3 border-t border-gray-700">
-                                    <div class="text-2xl font-bold gradient-text">$17,400</div>
+                                    <div class="text-xl sm:text-2xl font-bold gradient-text">$17,400</div>
                                     <div class="text-gray-500 text-xs">annual savings</div>
                                 </div>
                             </div>
@@ -923,8 +931,8 @@
                 </div>
 
                 <!-- Case Study 2 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
-                    <div class="grid md:grid-cols-[1fr,auto,1fr] gap-8 items-center">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
+                    <div class="grid md:grid-cols-[1fr,auto,1fr] gap-4 sm:gap-8 items-center">
                         <div>
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="glass px-3 py-1 rounded-full">
@@ -932,7 +940,7 @@
                                 </div>
                                 <span class="text-gray-500 text-sm">Healthcare • California</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Dental Practice Group</h3>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Dental Practice Group</h3>
                             <p class="text-gray-400 text-sm italic">
                                 "I was three days away from another 5-year auto-renewal. They caught it, renegotiated everything, and saved us thousands."
                             </p>
@@ -942,7 +950,7 @@
                             <svg class="w-8 h-8 text-green-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                             </svg>
-                            <div class="text-3xl font-bold gradient-text">56%</div>
+                            <div class="text-2xl sm:text-3xl font-bold gradient-text">56%</div>
                             <div class="text-gray-500 text-sm">reduction</div>
                         </div>
 
@@ -950,14 +958,14 @@
                             <div class="space-y-3">
                                 <div>
                                     <div class="text-gray-500 text-sm">Before</div>
-                                    <div class="text-xl font-bold text-white">$28,900/yr</div>
+                                    <div class="text-lg sm:text-xl font-bold text-white">$28,900/yr</div>
                                 </div>
                                 <div>
                                     <div class="text-gray-500 text-sm">After</div>
-                                    <div class="text-xl font-bold text-green-400">$12,600/yr</div>
+                                    <div class="text-lg sm:text-xl font-bold text-green-400">$12,600/yr</div>
                                 </div>
                                 <div class="pt-3 border-t border-gray-700">
-                                    <div class="text-2xl font-bold gradient-text">$16,300</div>
+                                    <div class="text-xl sm:text-2xl font-bold gradient-text">$16,300</div>
                                     <div class="text-gray-500 text-xs">annual savings</div>
                                 </div>
                             </div>
@@ -966,8 +974,8 @@
                 </div>
 
                 <!-- Case Study 3 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
-                    <div class="grid md:grid-cols-[1fr,auto,1fr] gap-8 items-center">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
+                    <div class="grid md:grid-cols-[1fr,auto,1fr] gap-4 sm:gap-8 items-center">
                         <div>
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="glass px-3 py-1 rounded-full">
@@ -975,7 +983,7 @@
                                 </div>
                                 <span class="text-gray-500 text-sm">Hospitality • Texas</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Restaurant Chain (8 locations)</h3>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Restaurant Chain (8 locations)</h3>
                             <p class="text-gray-400 text-sm italic">
                                 "We were being charged differently at each location. They standardized everything and got us volume discounts we didn't know existed."
                             </p>
@@ -985,7 +993,7 @@
                             <svg class="w-8 h-8 text-green-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                             </svg>
-                            <div class="text-3xl font-bold gradient-text">50%</div>
+                            <div class="text-2xl sm:text-3xl font-bold gradient-text">50%</div>
                             <div class="text-gray-500 text-sm">reduction</div>
                         </div>
 
@@ -993,14 +1001,14 @@
                             <div class="space-y-3">
                                 <div>
                                     <div class="text-gray-500 text-sm">Before</div>
-                                    <div class="text-xl font-bold text-white">$96,400/yr</div>
+                                    <div class="text-lg sm:text-xl font-bold text-white">$96,400/yr</div>
                                 </div>
                                 <div>
                                     <div class="text-gray-500 text-sm">After</div>
-                                    <div class="text-xl font-bold text-green-400">$48,200/yr</div>
+                                    <div class="text-lg sm:text-xl font-bold text-green-400">$48,200/yr</div>
                                 </div>
                                 <div class="pt-3 border-t border-gray-700">
-                                    <div class="text-2xl font-bold gradient-text">$48,200</div>
+                                    <div class="text-xl sm:text-2xl font-bold gradient-text">$48,200</div>
                                     <div class="text-gray-500 text-xs">annual savings</div>
                                 </div>
                             </div>
@@ -1009,8 +1017,8 @@
                 </div>
 
                 <!-- Case Study 4 -->
-                <div class="glass-dark rounded-2xl p-8 hover-lift">
-                    <div class="grid md:grid-cols-[1fr,auto,1fr] gap-8 items-center">
+                <div class="glass-dark rounded-xl sm:rounded-2xl p-6 sm:p-8 hover-lift">
+                    <div class="grid md:grid-cols-[1fr,auto,1fr] gap-4 sm:gap-8 items-center">
                         <div>
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="glass px-3 py-1 rounded-full">
@@ -1018,7 +1026,7 @@
                                 </div>
                                 <span class="text-gray-500 text-sm">Manufacturing • Florida</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Automotive Parts Manufacturer</h3>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Automotive Parts Manufacturer</h3>
                             <p class="text-gray-400 text-sm italic">
                                 "Hidden fees were killing us. Fuel surcharges, processing fees, delivery charges. They eliminated all of it and locked in our rate."
                             </p>
@@ -1028,7 +1036,7 @@
                             <svg class="w-8 h-8 text-green-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                             </svg>
-                            <div class="text-3xl font-bold gradient-text">56%</div>
+                            <div class="text-2xl sm:text-3xl font-bold gradient-text">56%</div>
                             <div class="text-gray-500 text-sm">reduction</div>
                         </div>
 
@@ -1036,14 +1044,14 @@
                             <div class="space-y-3">
                                 <div>
                                     <div class="text-gray-500 text-sm">Before</div>
-                                    <div class="text-xl font-bold text-white">$52,800/yr</div>
+                                    <div class="text-lg sm:text-xl font-bold text-white">$52,800/yr</div>
                                 </div>
                                 <div>
                                     <div class="text-gray-500 text-sm">After</div>
-                                    <div class="text-xl font-bold text-green-400">$23,100/yr</div>
+                                    <div class="text-lg sm:text-xl font-bold text-green-400">$23,100/yr</div>
                                 </div>
                                 <div class="pt-3 border-t border-gray-700">
-                                    <div class="text-2xl font-bold gradient-text">$29,700</div>
+                                    <div class="text-xl sm:text-2xl font-bold gradient-text">$29,700</div>
                                     <div class="text-gray-500 text-xs">annual savings</div>
                                 </div>
                             </div>
@@ -1063,13 +1071,13 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 relative border-t border-gray-800">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
+    <section class="py-16 sm:py-24 relative border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
                 <h2 class="section-title text-white mb-4">
                     Common <span class="gradient-text">questions</span>
                 </h2>
-                <p class="text-xl text-gray-400">
+                <p class="text-lg sm:text-xl text-gray-400">
                     Everything you need to know before getting started.
                 </p>
             </div>
@@ -1169,12 +1177,12 @@
     </section>
 
     <!-- Final CTA Section -->
-    <section class="py-24 relative border-t border-gray-800">
+    <section class="py-16 sm:py-24 relative border-t border-gray-800">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="section-title text-white mb-6">
                 Ready to stop <span class="gradient-text">overpaying</span>?
             </h2>
-            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Get your free contract analysis. We'll show you exactly where you're being overcharged and how much you can save.
             </p>
 
@@ -1185,14 +1193,14 @@
                     </button>
                     <div class="flex items-center justify-center gap-4">
                         <span class="text-gray-500">or call</span>
-                        <a href="tel:951-963-9575" class="text-white font-semibold text-xl hover:text-green-400 transition-colors">
+                        <a href="tel:951-963-9575" class="text-white font-semibold text-lg sm:text-xl hover:text-green-400 transition-colors">
                             951-963-9575
                         </a>
                     </div>
                 </div>
 
                 <div class="mt-8 pt-8 border-t border-gray-700">
-                    <div class="grid grid-cols-3 gap-8 text-center">
+                    <div class="grid grid-cols-3 gap-4 sm:gap-8 text-center">
                         <div>
                             <div class="text-green-400 font-semibold mb-1">Zero Risk</div>
                             <div class="text-gray-500 text-sm">No upfront fees</div>
@@ -1217,7 +1225,7 @@
 
     <!-- Footer -->
     <footer class="border-t border-gray-800 py-12">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="text-gray-500 text-sm">
                     © 2025 UniformBright. All rights reserved.
